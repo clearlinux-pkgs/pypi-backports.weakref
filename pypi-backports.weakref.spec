@@ -17,12 +17,12 @@ BuildRequires : buildreq-distutils3
 Provides: backports.weakref
 Provides: backports.weakref-python
 Provides: backports.weakref-python3
-BuildRequires : pluggy
+BuildRequires : pypi(pluggy)
 BuildRequires : py-python
 BuildRequires : pypi(setuptools_scm)
 BuildRequires : pytest
 BuildRequires : tox
-BuildRequires : virtualenv
+BuildRequires : pypi(virtualenv)
 
 %description
 backports.weakref
