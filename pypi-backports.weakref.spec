@@ -4,7 +4,7 @@
 #
 Name     : pypi-backports.weakref
 Version  : 1.0.post1
-Release  : 51
+Release  : 52
 URL      : https://files.pythonhosted.org/packages/12/ab/cf35cf43a4a6215e3255cf2e49c77d5ba1e9c733af2aa3ec1ca9c4d02592/backports.weakref-1.0.post1.tar.gz
 Source0  : https://files.pythonhosted.org/packages/12/ab/cf35cf43a4a6215e3255cf2e49c77d5ba1e9c733af2aa3ec1ca9c4d02592/backports.weakref-1.0.post1.tar.gz
 Summary  : Backport of new features in Python's weakref module
@@ -14,15 +14,12 @@ Requires: pypi-backports.weakref-license = %{version}-%{release}
 Requires: pypi-backports.weakref-python = %{version}-%{release}
 Requires: pypi-backports.weakref-python3 = %{version}-%{release}
 BuildRequires : buildreq-distutils3
-Provides: backports.weakref
-Provides: backports.weakref-python
-Provides: backports.weakref-python3
-BuildRequires : pypi(pluggy)
-BuildRequires : py-python
+BuildRequires : pypi(py)
 BuildRequires : pypi(setuptools_scm)
-BuildRequires : pytest
-BuildRequires : tox
-BuildRequires : pypi(virtualenv)
+BuildRequires : pypi-pluggy
+BuildRequires : pypi-pytest
+BuildRequires : pypi-tox
+BuildRequires : pypi-virtualenv
 
 %description
 backports.weakref
@@ -67,7 +64,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1641420292
+export SOURCE_DATE_EPOCH=1649692737
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
 export FCFLAGS="$FFLAGS -fno-lto "
