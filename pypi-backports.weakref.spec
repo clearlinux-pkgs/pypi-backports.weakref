@@ -4,7 +4,7 @@
 #
 Name     : pypi-backports.weakref
 Version  : 1.0.post1
-Release  : 54
+Release  : 55
 URL      : https://files.pythonhosted.org/packages/12/ab/cf35cf43a4a6215e3255cf2e49c77d5ba1e9c733af2aa3ec1ca9c4d02592/backports.weakref-1.0.post1.tar.gz
 Source0  : https://files.pythonhosted.org/packages/12/ab/cf35cf43a4a6215e3255cf2e49c77d5ba1e9c733af2aa3ec1ca9c4d02592/backports.weakref-1.0.post1.tar.gz
 Summary  : Backport of new features in Python's weakref module
@@ -67,7 +67,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1653005579
+export SOURCE_DATE_EPOCH=1656360843
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
 export FCFLAGS="$FFLAGS -fno-lto "
@@ -105,7 +105,7 @@ popd
 ## Remove excluded files
 rm -f %{buildroot}*/usr/lib/python3*/site-packages/backports/__pycache__/__init__.cpython-3*.pyc
 rm -f %{buildroot}*/usr/lib/python3*/site-packages/backports/__init__.py
-/usr/bin/elf-move.py avx2 %{buildroot}-v3 %{buildroot}/usr/share/clear/optimized-elf/ %{buildroot}/usr/share/clear/filemap/filemap-%{name}
+/usr/bin/elf-move.py avx2 %{buildroot}-v3 %{buildroot} %{buildroot}/usr/share/clear/filemap/filemap-%{name}
 
 %files
 %defattr(-,root,root,-)
